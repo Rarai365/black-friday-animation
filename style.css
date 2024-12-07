@@ -130,9 +130,10 @@ body {
 
 .second-text {
   animation: second-animation 2s;
-  animation-iteration-count: infinite;
+  /* animation-iteration-count: infinite; */
   transform: rotate(20deg);
   font-size: 3rem;
+
   /* animation-timing-function: ease-in; */
   animation: name duration timing-function delay iteration-count direction
     fill-mode;
@@ -143,11 +144,13 @@ body {
   from {
     color: white;
     transform: rotate(0deg);
+    scale: 100px;
   }
 
   to {
     color: black;
     transform: rotate(360deg);
+    scale: 100% 1;
   }
 }
 
@@ -213,4 +216,105 @@ body {
   height: 50vh;
   width: 50vw;
   border-radius: 10%;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  /* border: 12px solid black; */
+
+  flex-wrap: wrap;
+}
+
+.card-1 {
+  border: 12px solid black;
+  height: 20vh;
+  width: 45vw;
+  position: relative;
+  top: 10vh;
+  margin-bottom: 12px;
+  background-color: bisque;
+
+  animation: ram 3s;
+  /* animation-iteration-count: infinite; */
+  /* animation-delay: 2s; */
+}
+@keyframes ram {
+  from {
+    /* translate: 100vh 0; */
+    scale: 100% 1;
+    rotate: 90deg;
+  }
+
+  to {
+    /* translate: 1vw 0; */
+    rotate: 0deg;
+  }
+}
+
+.card-2 {
+  border: 12px solid black;
+  height: 20vh;
+  width: 45vw;
+  position: relative;
+  top: 10vh;
+  background-color: gold;
+
+  animation: ram 3s;
+  animation-delay: 2s;
+  /* animation-iteration-count: infinite; */
+}
+
+.card-3 {
+  border: 12px solid black;
+  height: 20vh;
+  width: 45vw;
+  position: relative;
+  top: 10vh;
+  background-color: azure;
+
+  animation: ram 3s;
+  animation-delay: 3s;
+  /* animation-iteration-count: infinite; */
+}
+
+.card-4 {
+  border: 12px solid black;
+  height: 20vh;
+  width: 45vw;
+  position: relative;
+  top: 10vh;
+  background-color: burlywood;
+
+  animation: ram 3s;
+  animation-delay: 4s;
+  /* animation-iteration-count: infinite; */
+}
+
+.card-5 {
+  border: 12px solid black;
+  height: 20vh;
+  width: 45vw;
+  position: relative;
+  top: 10vh;
+  background-color: burlywood;
+  margin-top: 12px;
+
+  animation: ram 3s;
+  animation-delay: 6s;
+  /* animation-iteration-count: infinite; */
+}
+
+.card-6 {
+  border: 12px solid black;
+  height: 20vh;
+  width: 45vw;
+  position: relative;
+  top: 10vh;
+  background-color: burlywood;
+  margin-top: 12px;
+
+  animation: ram 3s;
+  animation-delay: 8s;
+  /* animation-iteration-count: infinite; */
 }
