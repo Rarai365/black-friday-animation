@@ -196,7 +196,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 10rem;
-  background-color: black;
+  /* background-color: black; */
   width: 100vw;
 
   animation: animate 3s linear infinite;
@@ -216,6 +216,7 @@ body {
   height: 50vh;
   width: 50vw;
   border-radius: 10%;
+  border: 30px solid red;
 }
 
 .cards {
@@ -226,6 +227,10 @@ body {
   flex-wrap: wrap;
 }
 
+.pic {
+  height: 19vh;
+  width: 43vw;
+}
 .card-1 {
   border: 12px solid black;
   height: 20vh;
@@ -317,4 +322,45 @@ body {
   animation: ram 3s;
   animation-delay: 8s;
   /* animation-iteration-count: infinite; */
+}
+
+.animate-box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-left: 30%;
+  margin-top: 20%;
+}
+
+.animate-box::before {
+  content: " sdgsdg";
+  position: absolute;
+  width: 180px;
+  height: 140%;
+  background-color: rgb(220, 11, 11);
+  box-shadow: 0 0 20px rgb(8, 8, 8);
+  animation: animated 4s linear infinite;
+}
+
+.animate-box::after {
+  content: " ";
+  position: absolute;
+  inset: 10px;
+  background-color: rgb(8, 103, 131);
+  border-radius: 16px;
+}
+
+@keyframes animated {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
